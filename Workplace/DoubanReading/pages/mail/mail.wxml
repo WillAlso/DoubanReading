@@ -1,0 +1,11 @@
+<view>
+<view style='display:flex;flex-direction:row;align-item:center;'>
+  <input style='border: 1px solid grey;height:40px;margin-top:10px;' class='input' bindinput='inputtext'></input>
+  <button style='font-size:15px;height:40px;align-item:center;margin-top:10px;' bindtap='sendBtn'>获取验证码</button>
+  </view>
+  <view style='display:flex;flex-direction:row;align-item:center;'>
+  <label style='margin-top:15px;margin-left:5px;'>填写验证码</label>
+  <input style='border: 1px solid grey;height:40px;margin-top:10px;' class='input' bindinput='inputcode'></input>
+  </view>
+  <button style='margin-top:10px;' bindtap='bindBtn'>绑定邮箱</button>
+</view>

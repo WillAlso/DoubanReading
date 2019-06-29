@@ -1,0 +1,38 @@
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: "#eee";
+  height: 60 px;
+  width: 100%;
+  margin: 5px 15px;
+}
+
+.item-style {
+  display: flex;
+  flex-direction: row;
+  height: 270rpx;
+  border-top: 0.5px solid rgb(167, 165, 165);
+  padding-left: 15px;
+  align-items: center;
+}
+
+.item-text {
+  font-size: 20px;
+}
+
+.item-image {
+  height: 250rpx;
+  width: 175rpx;
+}
+
+.float-btn {
+  width: 100rpx;
+  height: 100rpx;
+  background: rgba(0, 0, 0, 0);
+  margin-top: 1.6vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 100rpx;
+  left: 600rpx;
+}

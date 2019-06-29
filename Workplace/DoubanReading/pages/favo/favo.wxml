@@ -1,0 +1,10 @@
+<scroll-view style='border-bottom: 0.5px solid grey;'>
+  <view style='display:flex;flex-direction:column;' class='item' wx:for='{{books}}' bindtap='itemBtn' data-book-id='{{item.bookId}}'>
+    <view>
+      <text style='font-size:30px;'>{{item.bookName}}</text>
+    </view>
+    <view>
+      <text>ISBN:{{item.bookIsbn}}</text>
+    </view>
+  </view>
+</scroll-view>

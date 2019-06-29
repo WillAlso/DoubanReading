@@ -1,0 +1,14 @@
+<view>
+  <scroll-view>
+    <view class='item-style' wx:for='{{bookimages}}' bindtap='newbook' data-book-id='{{item.bookId}}'>
+    <view style='margin-top:5px;margin-right:15px;' >
+      <image class='item-image' src='{{item.image}}'></image>
+    </view>
+    <view style='display:flex;flex-direction:column;'>
+      <text class='item-text'>标题：{{item.title}}</text>
+      <text class='item-text'>作者：{{item.author}}</text>
+      <text class='item-text'>ISBN：{{item.isbn}}</text>
+    </view>
+  </view>
+  </scroll-view>
+</view>

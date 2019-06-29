@@ -1,0 +1,19 @@
+<view>
+<view class='search-bar' >
+  <input placeholder='搜索的图书名字、作者或ISBN' type='text' maxlength='10' placeholder-style='font-size: 15px;' style='border: 1px solid grey; padding: 3px;border-radius: 10px;height: 40px;width: 65%;' value='{{content}}' bindinput='serachtext'></input>
+  <button style='font-size: 15px; width: 25%; height: 43px;border-radius: 5px; text-align: middle;' bindtap='searchBtn'>搜索</button>
+</view>
+<scroll-view style='border-bottom: 0.5px solid rgb(167, 165, 165);' wx:for='{{books}}'>
+  <view class='item-style' bindtap='searchitem' data-item='{{item.id}}'>
+    <view style='margin-top:5px;margin-right:15px;' >
+      <image class='item-image' src='{{item.image}}'></image>
+    </view>
+    <view style='display:flex;flex-direction:column;'>
+      <text class='item-text'>标题：{{item.title}}</text>
+      <text class='item-text'>作者：{{item.author}}</text>
+      <text class='item-text'>ISBN：{{item.isbn13}}</text>
+    </view>
+  </view>
+</scroll-view>
+<image class='float-btn' catchtap='floatBtn' src='/images/scan/scan.png'></image>
+</view>

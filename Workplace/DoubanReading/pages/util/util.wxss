@@ -1,0 +1,17 @@
+.item-style {
+  display: flex;
+  flex-direction: row;
+  height: 270rpx;
+  border-top: 0.5px solid rgb(167, 165, 165);
+  padding-left: 15px;
+  align-items: center;
+}
+
+.item-text {
+  font-size: 20px;
+}
+
+.item-image {
+  height: 250rpx;
+  width: 175rpx;
+}

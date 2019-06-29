@@ -1,0 +1,56 @@
+<scroll-view class='detail-view'>
+  <view style='margin-top: 15px;display: flex;flex-direction:row;'>
+    <image class='detail-image' src='{{book.images.medium}}'></image>
+    <view style='margin-top: 15px;display: flex;flex-direction:column;margin-left: 15px;'>
+      <text>{{book.title}}</text>
+      <text style='width:200px;'>{{book.author[0]}}/{{book.publisher}}/出版时间：{{book.pubdate}}</text>
+      <view>
+        <image style='margin-left:120px;' src='/images/detail/fork.png' class='btnimage' bindtap='fork'></image>
+        <image style='margin-left:20px;' src='/images/detail/send.png' class='btnimage' bindtap='sendkindle'></image>
+      </view>
+    </view>
+  </view>
+  <view class='detail-score'>
+    <text style='font-size:15px;'>豆瓣评分</text>
+    <view style='display:flex;flex-direction:row;'>
+      <view style='margin-left: 15px;margin-right:15px;'>
+        <text style='font-size: 50px;'>{{book.rating.average}}</text>
+      </view>
+      <view>
+        <view style='display:flex;'>
+          <image class='star' src='/images/star/5.png'></image>
+          <progress percent='{{process[1]}}' show-info='true' style='width:200px;'></progress>
+        </view>
+        <view style='display:flex;'>
+          <image class='star' src='/images/star/4.png'></image>
+          <progress percent='{{process[2]}}' show-info='true' style='width:200px;'></progress>
+        </view>
+        <view style='display:flex;'>
+          <image class='star' src='/images/star/3.png'></image>
+          <progress percent='{{process[3]}}' show-info='true' style='width:200px;'></progress>
+        </view>
+        <view style='display:flex;'>
+          <image class='star' src='/images/star/2.png'></image>
+          <progress percent='{{process[4]}}' show-info='true' style='width:200px;'></progress>
+        </view>
+        <view style='display:flex;'>
+          <image class='star' src='/images/star/1.png'></image>
+          <progress percent='{{process[5]}}' show-info='true' style='width:200px;'></progress>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='display:flex;' class='label'>
+    <view>
+      <text style='font-size:17.5px;'>标签</text>
+    </view>
+    <label class='label-text'>{{book.tags[0].title}}</label>
+    <label class='label-text'>{{book.tags[1].title}}</label>
+    <label class='label-text'>{{book.tags[2].title}}</label>
+  </view>
+  <view class='intro'>
+    <text style='margin-top:10px;margin-bottom:10px;'>简介</text>
+    <text class='review-text'>{{book.summary}}</text>
+  </view>
+</scroll-view>

@@ -1,0 +1,6 @@
+.item {
+  border-top: 0.5px solid grey;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}

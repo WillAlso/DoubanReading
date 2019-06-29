@@ -1,0 +1,32 @@
+<view style='display: flex; flex-direction: column;'>
+  <view class='mine-bar'>
+    <image class='user-image' style='margin-top:10px;margin-bottom:10px;' src='{{userInfo.avatarUrl}}'></image>
+    <text style='margin-bottom:10px;'>{{userInfo.nickName}}</text>
+  </view>
+  <scroll-view style='margin-top: 20px;'>
+    <view class='mine-fun' style='border-top: 0.5px solid rgb(207, 206, 206);' bindtap='setVip'  hidden='true'>
+      <image src='/images/mine/VIP.png' class='option-image'></image>
+      <text style='font-size: 23px;'>开通会员</text>
+    </view>
+    <view class='mine-fun' style='border-top: 0.5px solid rgb(207, 206, 206);' catchtap='bindmail'>
+      <image src='/images/mine/mail.png' class='option-image'></image>
+      <text style='font-size: 23px;'>邮箱绑定</text>
+    </view>
+    <view class='mine-fun' catchtap='kindle'   hidden='true'>
+      <image src='/images/mine/kindle.png' class='option-image'></image>
+      <text style='font-size: 23px;'>Kindle推送</text>
+    </view>
+    <view class='mine-fun' catchtap='fork'>
+      <image src='/images/mine/shoucang.png' class='option-image'></image>
+      <text style='font-size: 23px;'>收藏图书</text>
+    </view>
+    <view class='mine-fun'  hidden='true'>
+      <image src='/images/mine/jilu.png' class='option-image'></image>
+      <text style='font-size: 23px;' >推送记录</text>
+    </view>
+    <view class='mine-fun' catchtap='advice'   hidden='true'>
+      <image src='/images/mine/advice.png' class='option-image'></image>
+      <text style='font-size: 23px;' >反馈意见</text>
+    </view>
+  </scroll-view>
+</view>

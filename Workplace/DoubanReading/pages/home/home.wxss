@@ -1,0 +1,58 @@
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: "#eee";
+  height: 60 px;
+  width: 100%;
+  margin: 5px 15px;
+}
+
+.home-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(7, 206, 0);
+  justify-content: center;
+  padding: 10px;
+}
+
+.home-bar-text {
+  color: white;
+  font-size: 40 rpx;
+  font-weight: bold;
+}
+
+.title-bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.home-image {
+  height: 300rpx;
+  width: 210rpx;
+}
+
+.image-tab {
+  width: 250rpx;
+  height: 320 rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.7px solid rgb(180, 179, 179);
+  border-top: 0.7px solid rgb(180, 179, 179);
+  padding: 10px;
+}
+
+.home-button {
+  display: flex;
+  flex-direction: column;
+  width: 187.5rpx;
+  height: 187.5rpx;
+  border-top: 0.25px solid rgb(177, 177, 177);
+  border-bottom: 0.25px solid rgb(177, 177, 177);
+  border-left: 0.25px solid rgb(177, 177, 177);
+  align-items: center;
+  padding-top: 20rpx;
+}

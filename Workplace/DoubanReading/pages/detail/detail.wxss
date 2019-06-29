@@ -1,0 +1,61 @@
+.detail-view {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-image {
+  height: 300rpx;
+  width: 210rpx;
+  margin-left: 15px;
+}
+
+.detail-score {
+  width: 700rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15rpx;
+}
+
+.label-text {
+  border: 0.5px solid gray;
+  border-radius: 30%;
+  margin-left: 20rpx;
+  font-size: 20px;
+}
+
+.review-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 720rpx;
+  margin-left: 15rpx;
+  background: rgb(145, 142, 142);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.btnimage {
+  width: 70rpx;
+  height:70rpx;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,44 @@
+<scroll-view>
+  <view class='home-bar'>
+    <text class='home-bar-text'>首页</text>
+  </view>
+  <view class='search-bar'>
+    <input placeholder='搜索的图书名字、作者或ISBN'
+    type='text' maxlength='10' placeholder-style='font-size: 15px;'
+    style='border: 1px solid grey; padding: 3px;border-radius: 10px;height: 40px;width: 65%;' bindinput='inputtext'></input>
+    <button style='font-size: 15px; width: 25%; height: 43px;border-radius: 5px; text-align: middle;' bindtap='searchBtn'>搜索</button>
+  </view>
+  <view class='title-bar'>
+    <view class='home-button' catchtap='utilBtn' data-bar-num='1'>
+    <image src='/images/home/book1.png' style='width: 100rpx;height:100rpx;'></image>
+      <text style='font-size: 15px;'>新书速递</text>
+    </view>
+    <view class='home-button' catchtap='utilBtn' data-bar-num='2'>
+      <image src='/images/home/book4.png' style='width: 100rpx;height:100rpx;'></image>
+      <text style='font-size: 15px;'>编辑推荐</text>
+    </view>
+    <view class='home-button' catchtap='utilBtn' data-bar-num='3'>
+      <image src='/images/home/hot.png' style='width: 100rpx;height:100rpx;'></image>
+      <text style='font-size: 15px;'>最受欢迎</text>
+    </view>
+    <view class='home-button' catchtap='utilBtn' data-bar-num='4'>
+      <image src='/images/home/book3.png' style='width: 100rpx;height:100rpx;'></image>
+      <text style='font-size: 15px;'>排行榜</text>
+    </view>
+  </view>
+  <view style='height: 0.5px;width: 100%;border: 0.25px solid grey;margin:top: 5px;'>
+  </view>
+  <view style='margin-bottom: 5px;'>
+    <text style='font-size: 12px;'>今日推荐</text>
+  </view>
+  <view style='display: flex;'>
+    <view class='image-tab' catchtap='imageBtn' wx:for='{{imageList1}}' data-book-id = '{{item.bookId}}'>
+      <image class='home-image' src='{{item.imageUrl}}'></image>
+    </view>
+  </view>
+  <view style='display: flex;border-bottom:0.7px solid rgb(180, 179, 179);' >
+    <view class='image-tab' catchtap='imageBtn' wx:for='{{imageList2}}' data-book-id = '{{item.bookId}}'>
+      <image class='home-image' src='{{item.imageUrl}}' ></image>
+    </view>
+  </view>
+</scroll-view>
