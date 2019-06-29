@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>DoubanServer</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>Newbook</servlet-name>
+        <servlet-class>Newbook.Newbook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Newbook</servlet-name>
+        <url-pattern>/Newbook</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Popular</servlet-name>
+        <servlet-class>Popular.Popular</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Popular</servlet-name>
+        <url-pattern>/Popular</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Remmend</servlet-name>
+        <servlet-class>Remmend.Remmend</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Remmend</servlet-name>
+        <url-pattern>/Remmend</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Top</servlet-name>
+        <servlet-class>Top.Top</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Top</servlet-name>
+        <url-pattern>/Top</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Sendmail</servlet-name>
+        <servlet-class>Sendmail.Sendmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Sendmail</servlet-name>
+        <url-pattern>/Sendmail</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>adduser</servlet-name>
+        <servlet-class>adduser.adduser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adduser</servlet-name>
+        <url-pattern>/adduser</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>fork</servlet-name>
+        <servlet-class>fork.fork</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fork</servlet-name>
+        <url-pattern>/fork</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getscore</servlet-name>
+        <servlet-class>getscore.getscore</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getscore</servlet-name>
+        <url-pattern>/getscore</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getfork</servlet-name>
+        <servlet-class>getfork.getfork</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getfork</servlet-name>
+        <url-pattern>/getfork</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>kindle</servlet-name>
+        <servlet-class>kindle.kindle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>kindle</servlet-name>
+        <url-pattern>/kindle</url-pattern>
+    </servlet-mapping>
+</web-app>
