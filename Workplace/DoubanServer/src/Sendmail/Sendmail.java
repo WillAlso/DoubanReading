@@ -39,8 +39,8 @@ public class Sendmail extends HttpServlet {
         pw.close();
     }
 
-    private final String accessKey = "LTAIo6OmW6afzg5x";
-    private final String accessSecret = "loPVsCtjUMQaJJlVslfm84e5uzEkjq";
+    private final String accessKey = "***";         //Is it interesting?
+    private final String accessSecret = "***";
     private String email = null;
     
     public void setEmail(String email) {
@@ -66,13 +66,13 @@ public class Sendmail extends HttpServlet {
         String rand = Integer.toString(randnum);
         try {
             request.setAccountName("willalso@www.fenggangguo.xyz");
-            request.setFromAlias("¶¹°êÔÄ¶Á");
+            request.setFromAlias("è±†ç“£é˜…è¯»");
             request.setAddressType(1);
             request.setTagName("WillAlso");
             request.setReplyToAddress(true);
             request.setToAddress(email);
-            request.setSubject("¶¹°êÔÄ¶ÁÓÊÏä°ó¶¨");
-            String body = "ÄúµÄÑéÖ¤ÂëÊÇ" + rand;
+            request.setSubject("è±†ç“£é˜…è¯»é‚®ç®±ç»‘å®š");
+            String body = "æ‚¨çš„éªŒè¯ç æ˜¯" + rand;
             request.setHtmlBody(body);
             SingleSendMailResponse httpResponse = client.getAcsResponse(request);
         } catch (ServerException e) {
