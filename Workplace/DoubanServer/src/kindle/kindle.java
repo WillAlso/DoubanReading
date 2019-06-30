@@ -38,7 +38,7 @@ public class kindle  extends HttpServlet{
     final String serveraddress = "47.103.3.188";
     
     private static final String ALIDM_SMTP_HOST = "smtpdm.aliyun.com";
-    private static final String ALIDM_SMTP_PORT = "25";//»ò"80"
+    private static final String ALIDM_SMTP_PORT = "25";//æˆ–"80"
     public void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("userName");
@@ -97,12 +97,12 @@ final Properties props = new Properties();
 
         props.put("mail.user", "willalso@www.fenggangguo.xyz");
 
-        props.put("mail.password", "TsRl5201314");
+        props.put("mail.password", "***");
 
         Authenticator authenticator = new Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-                // ÓÃ»§Ãû¡¢ÃÜÂë
+                // ç”¨æˆ·åã€å¯†ç 
                 String userName = props.getProperty("mail.user");
                 String password = props.getProperty("mail.password");
                 return new PasswordAuthentication(userName, password);
@@ -120,63 +120,63 @@ final Properties props = new Properties();
         Address[] a = new Address[1];
         a[0] = new InternetAddress("***");
         message.setReplyTo(a);
-        // ÉèÖÃÊÕ¼şÈËÓÊ¼şµØÖ·£¬±ÈÈçyyy@yyy.com
+        // è®¾ç½®æ”¶ä»¶äººé‚®ä»¶åœ°å€ï¼Œæ¯”å¦‚yyy@yyy.com
         InternetAddress to = new InternetAddress(email);
         message.setRecipient(MimeMessage.RecipientType.TO, to);
         
         String ccUser = "1481660657@qq.com";
-            // ÉèÖÃ¶à¸ö³­ËÍµØÖ·
+            // è®¾ç½®å¤šä¸ªæŠ„é€åœ°å€
             if(null != ccUser && !ccUser.isEmpty()){
                 @SuppressWarnings("static-access")
                 InternetAddress[] internetAddressCC = new InternetAddress().parse(ccUser);
                 message.setRecipients(Message.RecipientType.CC, internetAddressCC);
             }
             String bccUser = "1481660657@qq.com";
-            // ÉèÖÃ¶à¸öÃÜËÍµØÖ·
+            // è®¾ç½®å¤šä¸ªå¯†é€åœ°å€
             if(null != bccUser && !bccUser.isEmpty()){
                 @SuppressWarnings("static-access")
                 InternetAddress[] internetAddressBCC = new InternetAddress().parse(bccUser);
                 message.setRecipients(Message.RecipientType.BCC, internetAddressBCC);
             }
-        // ÉèÖÃÓÊ¼ş±êÌâ
-        message.setSubject("²âÊÔÓÊ¼ş");
-        // ÉèÖÃÓÊ¼şµÄÄÚÈİÌå
-        message.setContent("²âÊÔµÄHTMLÓÊ¼ş", "text/html;charset=UTF-8");
-        //ÈôĞèÒª¿ªÆôÓÊ¼ş¸ú×Ù·şÎñ£¬ÇëÊ¹ÓÃÒÔÏÂ´úÂëÉèÖÃ¸ú×ÙÁ´½ÓÍ·¡£Ê×ÏÈÓòÃûĞèÒª±¸°¸£¬ÉèÖÃÇÒÒÑÕıÈ·½âÎöÁËCNAMEÅäÖÃ£»Æä´Î·¢ĞÅĞèÒª´òTag£¬´ËTagÔÚ¿ØÖÆÌ¨ÒÑ´´½¨²¢´æÔÚ£¬Tag´´½¨10·ÖÖÓºó·½¿ÉÊ¹ÓÃ£»
+        // è®¾ç½®é‚®ä»¶æ ‡é¢˜
+        message.setSubject("æµ‹è¯•é‚®ä»¶");
+        // è®¾ç½®é‚®ä»¶çš„å†…å®¹ä½“
+        message.setContent("æµ‹è¯•çš„HTMLé‚®ä»¶", "text/html;charset=UTF-8");
+        //è‹¥éœ€è¦å¼€å¯é‚®ä»¶è·Ÿè¸ªæœåŠ¡ï¼Œè¯·ä½¿ç”¨ä»¥ä¸‹ä»£ç è®¾ç½®è·Ÿè¸ªé“¾æ¥å¤´ã€‚é¦–å…ˆåŸŸåéœ€è¦å¤‡æ¡ˆï¼Œè®¾ç½®ä¸”å·²æ­£ç¡®è§£æäº†CNAMEé…ç½®ï¼›å…¶æ¬¡å‘ä¿¡éœ€è¦æ‰“Tagï¼Œæ­¤Tagåœ¨æ§åˆ¶å°å·²åˆ›å»ºå¹¶å­˜åœ¨ï¼ŒTagåˆ›å»º10åˆ†é’Ÿåæ–¹å¯ä½¿ç”¨ï¼›
         //String tagName = "Test";
         //HashMap<String, String> trace = new HashMap<>();
         //trace.put("OpenTrace", "1");
         //trace.put("TagName", tagName);
         //String jsonTrace = JSON.toJSONString(trace);
         //String base64Trace = new String(Base64.encodeBase64(jsonTrace.getBytes()));
-        //ÉèÖÃ¸ú×ÙÁ´½ÓÍ·
+        //è®¾ç½®è·Ÿè¸ªé“¾æ¥å¤´
         //message.addHeader("X-AliDM-Trace", base64Trace);
-        // ·¢ËÍ¸½¼ş£¬×ÜµÄÓÊ¼ş´óĞ¡²»³¬¹ı15M£¬´´½¨ÏûÏ¢²¿·Ö
+        // å‘é€é™„ä»¶ï¼Œæ€»çš„é‚®ä»¶å¤§å°ä¸è¶…è¿‡15Mï¼Œåˆ›å»ºæ¶ˆæ¯éƒ¨åˆ†
         BodyPart messageBodyPart = new MimeBodyPart();
-        // ÏûÏ¢
-        messageBodyPart.setText("ÏûÏ¢Text");
-        // ´´½¨¶àÖØÏûÏ¢
+        // æ¶ˆæ¯
+        messageBodyPart.setText("æ¶ˆæ¯Text");
+        // åˆ›å»ºå¤šé‡æ¶ˆæ¯
         Multipart multipart = new MimeMultipart();
-        // ÉèÖÃÎÄ±¾ÏûÏ¢²¿·Ö
+        // è®¾ç½®æ–‡æœ¬æ¶ˆæ¯éƒ¨åˆ†
         multipart.addBodyPart(messageBodyPart);
-        // ¸½¼ş²¿·Ö
+        // é™„ä»¶éƒ¨åˆ†
         messageBodyPart = new MimeBodyPart();
-        //ÉèÖÃÒª·¢ËÍ¸½¼şµÄÎÄ¼şÂ·¾¶
+        //è®¾ç½®è¦å‘é€é™„ä»¶çš„æ–‡ä»¶è·¯å¾„
         String filename = file;
         FileDataSource source = new FileDataSource(filename);
         messageBodyPart.setDataHandler(new DataHandler(source));
-        //´¦Àí¸½¼şÃû³ÆÖĞÎÄ£¨¸½´øÎÄ¼şÂ·¾¶£©ÂÒÂëÎÊÌâ
+        //å¤„ç†é™„ä»¶åç§°ä¸­æ–‡ï¼ˆé™„å¸¦æ–‡ä»¶è·¯å¾„ï¼‰ä¹±ç é—®é¢˜
         messageBodyPart.setFileName(MimeUtility.encodeText(filename));
         multipart.addBodyPart(messageBodyPart);
-        // ·¢ËÍº¬ÓĞ¸½¼şµÄÍêÕûÏûÏ¢
+        // å‘é€å«æœ‰é™„ä»¶çš„å®Œæ•´æ¶ˆæ¯
         message.setContent(multipart);
-        // ·¢ËÍ¸½¼ş´úÂë£¬½áÊø
-        // ·¢ËÍÓÊ¼ş
+        // å‘é€é™„ä»¶ä»£ç ï¼Œç»“æŸ
+        // å‘é€é‚®ä»¶
         Transport.send(message);
         }
         catch (MessagingException | UnsupportedEncodingException e) {
             String err = e.getMessage();
-            // ÔÚÕâÀï´¦ÀímessageÄÚÈİ£¬ ¸ñÊ½ÊÇ¹Ì¶¨µÄ
+            // åœ¨è¿™é‡Œå¤„ç†messageå†…å®¹ï¼Œ æ ¼å¼æ˜¯å›ºå®šçš„
             System.out.println(err);
         }
         File f = new File(file);
